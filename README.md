@@ -5,6 +5,9 @@
 ## License
 
 * MIT
+* 作者：劉正吉
+* author: Liou, Jeng-Jyi
+* https://sites.google.com/jes.mlc.edu.tw/ljj/
 
 ## Supported targets
 
