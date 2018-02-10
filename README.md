@@ -8,6 +8,7 @@
 * 作者：劉正吉
 * author: Liou, Jeng-Jyi
 * https://sites.google.com/jes.mlc.edu.tw/ljj/
+* The package was designed for LCM1602 display to connect micro:bit in makecode.
 
 ## Supported targets
 
