@@ -40,7 +40,11 @@ namespace lcd1602 {
         //% block="0x27"
         addr1 = 0x27,
         //% block="0x3f"
-        addr2 = 0x3f
+        addr2 = 0x3f,
+        //% block="0x62"
+        addr3 = 0x62,
+        //% block="0x3e"
+        addr4 = 0x3e
     }
     export enum on_off {
         //% block="on"
@@ -56,10 +60,7 @@ namespace lcd1602 {
         invisible = 0
     }
 
-    //% blockId="LCD_setAddress" block="LCD1602 I2C address %myAddr"
-    //% weight=0 blockExternalInputs=true
-    export function setAddress(myAddr: I2C_ADDR): void {
-        LCD_I2C_ADDR = myAddr
+    function setI2CAddress(): void {
         setcmd(0x33)
         basic.pause(5)
         send(0x30)
@@ -70,16 +71,30 @@ namespace lcd1602 {
         setcmd(0x0C)
         setcmd(0x06)
         setcmd(0x01)
+    } 
+
+    //% blockId="LCD_setAddress" block="LCD1602 I2C address %myAddr"
+    //% weight=0 blockExternalInputs=true
+    export function setAddress(myAddr: I2C_ADDR): void {
+        LCD_I2C_ADDR = myAddr
+        setI2CAddress()
+    }
+
+    //% blockId="LCD_setAddress2" block="LCD1602 I2C address %myAddr"
+    //% weight=1 blockExternalInputs=true
+    export function setAddress2(myAddr: number): void {
+        LCD_I2C_ADDR = myAddr
+        setI2CAddress()
     }
 
     //% blockId="LCD_clear" block="LCD clear"
-    //% weight=1
+    //% weight=2
     export function clear(): void {
         setcmd(0x01)
     }
 
     //% blockId="LCD_backlight" block="set LCD backlight %on"
-    //% weight=2
+    //% weight=3
     export function set_backlight(on: on_off): void {
         if (on == 1)
             BK = 0x08
@@ -89,7 +104,7 @@ namespace lcd1602 {
     }
 
     //% blockId="LCD_Show" block="set string %show"
-    //% weight=3
+    //% weight=4
     export function set_LCD_Show(show: visibled): void {
         if (show == 1)
             setcmd(0x0C)
@@ -109,7 +124,7 @@ namespace lcd1602 {
     }
 
     //% blockId="LCD_putString" block="LCD show string %s|on x:%x|y:%y"
-    //% weight=5 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+    //% weight=6 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putString(s: string, x: number, y: number): void {
         if (s.length > 0) {
             let breakPoint = -1
@@ -125,9 +140,9 @@ namespace lcd1602 {
         }
     }
     //% blockId="LCD_putNumber" block="LCD show number %n|on x:%x|y:%y"
-    //% weight=4 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+    //% weight=5 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putNumber(n: number, x: number, y: number): void {
         putString(n.toString(),x,y)
     }
 
-} 
+}
