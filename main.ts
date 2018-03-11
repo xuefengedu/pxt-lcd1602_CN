@@ -81,7 +81,7 @@ namespace lcd1602 {
     }
 
     //% blockId="LCD_setAddress2" block="LCD1602 I2C address %myAddr"
-    //% weight=1 blockExternalInputs=true
+    //% weight=7 blockExternalInputs=true
     export function setAddress2(myAddr: number): void {
         LCD_I2C_ADDR = myAddr
         setI2CAddress()
