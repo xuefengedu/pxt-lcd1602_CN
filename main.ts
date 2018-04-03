@@ -41,10 +41,12 @@ namespace lcd1602 {
         addr1 = 0x27,
         //% block="0x3f"
         addr2 = 0x3f,
+        //% block="0x20"
+        addr3 = 0x20,
         //% block="0x62"
-        addr3 = 0x62,
+        addr4 = 0x62,
         //% block="0x3e"
-        addr4 = 0x3e
+        addr5 = 0x3e
     }
     export enum on_off {
         //% block="on"
