@@ -1,5 +1,5 @@
 {
-    "lcd1602|block": "LCD1602",
+    "lcd1602|block": "LCD1602液晶",
     "lcd1602.setAddress|block": "设置LCD1602 I2C地址 %myAddr",
     "lcd1602.setAddress2|block": "设置LCD1602 I2C地址 %myAddr",
     "lcd1602.putString|block": "LCD 显示字符串 %s|在坐标 x:%x|y:%y",
