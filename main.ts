@@ -76,27 +76,27 @@ namespace lcd1602 {
     } 
 
     //% blockId="LCD_setAddress" block="LCD1602 I2C address %myAddr"
-    //% weight=0 blockExternalInputs=true
+    //% weight=44 blockExternalInputs=true
     export function setAddress(myAddr: I2C_ADDR): void {
         LCD_I2C_ADDR = myAddr
         setI2CAddress()
     }
 
     //% blockId="LCD_setAddress2" block="LCD1602 I2C address %myAddr"
-    //% weight=7 blockExternalInputs=true
+    //% weight=50 blockExternalInputs=true
     export function setAddress2(myAddr: number): void {
         LCD_I2C_ADDR = myAddr
         setI2CAddress()
     }
 
     //% blockId="LCD_clear" block="LCD clear"
-    //% weight=2
+    //% weight=45
     export function clear(): void {
         setcmd(0x01)
     }
 
     //% blockId="LCD_backlight" block="set LCD backlight %on"
-    //% weight=3
+    //% weight=46
     export function set_backlight(on: on_off): void {
         if (on == 1)
             BK = 0x08
@@ -106,7 +106,7 @@ namespace lcd1602 {
     }
 
     //% blockId="LCD_Show" block="set string %show"
-    //% weight=4
+    //% weight=47
     export function set_LCD_Show(show: visibled): void {
         if (show == 1)
             setcmd(0x0C)
@@ -126,7 +126,7 @@ namespace lcd1602 {
     }
 
     //% blockId="LCD_putString" block="LCD show string %s|on x:%x|y:%y"
-    //% weight=6 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+    //% weight=49 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putString(s: string, x: number, y: number): void {
         if (s.length > 0) {
             let breakPoint = -1
@@ -142,19 +142,19 @@ namespace lcd1602 {
         }
     }
     //% blockId="LCD_putNumber" block="LCD show number %n|on x:%x|y:%y"
-    //% weight=5 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+    //% weight=48 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putNumber(n: number, x: number, y: number): void {
         putString(n.toString(),x,y)
     }
 
     //% blockId="LCD_shl" block="Shift Left"
-    //% weight=9
+    //% weight=43
     export function shl(): void {
         setcmd(0x18)
     }
 
     //% blockId="LCD_shr" block="Shift Right"
-    //% weight=8
+    //% weight=42
     export function shr(): void {
         setcmd(0x1C)
     }
