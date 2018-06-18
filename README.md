@@ -10,7 +10,8 @@ https://github.com/microbit-makecode-packages/I2CLCD1620_cn (Shift Left and Shif
 
 MIT
 
-##Screen shots
+## Screen shots
+
 lcd1602 makecode picture:
 ![Alt text](lcd1602.PNG?raw=true "lcd1602 makecode picture")
 
