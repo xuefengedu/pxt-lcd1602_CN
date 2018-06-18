@@ -150,7 +150,7 @@ namespace lcd1602 {
 	/**
      * Screen Shift Left
      */
-    //% blockId="I2C_LCD1620_SHL" block="Shift Left"
+    //% blockId="LCD_shl" block="Shift Left"
     //% weight=61 blockGap=8
     export function shl(): void {
         setcmd(0x18)
@@ -159,7 +159,7 @@ namespace lcd1602 {
     /**
      * Screen Shift Right
      */
-    //% blockId="I2C_LCD1620_SHR" block="Shift Right"
+    //% blockId="LCD_shr" block="Shift Right"
     //% weight=60 blockGap=8
     export function shr(): void {
         setcmd(0x1C)
