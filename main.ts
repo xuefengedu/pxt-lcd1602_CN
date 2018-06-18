@@ -147,20 +147,14 @@ namespace lcd1602 {
         putString(n.toString(),x,y)
     }
 
-	/**
-     * Screen Shift Left
-     */
     //% blockId="LCD_shl" block="Shift Left"
-    //% weight=61 blockGap=8
+    //% weight=9
     export function shl(): void {
         setcmd(0x18)
     }
 
-    /**
-     * Screen Shift Right
-     */
     //% blockId="LCD_shr" block="Shift Right"
-    //% weight=60 blockGap=8
+    //% weight=8
     export function shr(): void {
         setcmd(0x1C)
     }
