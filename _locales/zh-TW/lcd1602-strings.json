@@ -11,6 +11,6 @@
     "lcd1602.set_LCD_Show|block": "設定字串 %show",
     "lcd1602.set_backlight|block": "設定LCD背光 %on",
     "lcd1602.clear|block": "LCD畫面清除",
-    "lcd1602.I2C_LCD1620_SHL|block": "LCD畫面左移",
-    "lcd1602.I2C_LCD1620_SHR|block": "LCD畫面右移"
+    "lcd1602.shl|block": "LCD畫面左移",
+    "lcd1602.shr|block": "LCD畫面右移"
 }

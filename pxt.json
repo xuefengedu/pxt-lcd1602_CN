@@ -1,7 +1,7 @@
 {
     "name": "lcd1602",
     "version": "0.1.0",
-    "description": "This is LCD1602 pxt for micro:bit",
+    "description": "A Microsoft MakeCode package for LCD1602 pxt",
     "license": "MIT",
     "dependencies": {
         "core": "*"

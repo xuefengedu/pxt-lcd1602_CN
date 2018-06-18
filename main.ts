@@ -1,5 +1,5 @@
 /**
-* LCD1602顯示器的函數
+* LCD1602 Screen Functions
 */
 
 //% weight=0 color=#794044 icon="\uf108" block="LCD1602"
