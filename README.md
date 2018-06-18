@@ -1,20 +1,12 @@
 # LCD1602
 
-這是專為micro:bit提供的LCD1602積木
+This is LCD1602 pxt for micro:bit
 
-## License
+forked from below 2 repository
 
-* MIT
-* 作者：劉正吉
-* author: Liou, Jeng-Jyi
-* https://sites.google.com/jes.mlc.edu.tw/ljj/
-* The package was designed for LCM1602 display to connect micro:bit in makecode.
+https://github.com/lioujj/pxt-lcd1602 (main and most functions)
 
-## Supported targets
+https://github.com/microbit-makecode-packages/I2CLCD1620_cn (Shift Left and Shift Right)
 
-* for PXT/microbit
-(The metadata above is needed for package search.)
 
-```package
-LCD1602=github:lioujj/pxt-lcd1602
-```
+MIT

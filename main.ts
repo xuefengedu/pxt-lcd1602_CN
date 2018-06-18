@@ -147,4 +147,21 @@ namespace lcd1602 {
         putString(n.toString(),x,y)
     }
 
+	/**
+     * Screen Shift Left
+     */
+    //% blockId="I2C_LCD1620_SHL" block="Shift Left"
+    //% weight=61 blockGap=8
+    export function shl(): void {
+        setcmd(0x18)
+    }
+
+    /**
+     * Screen Shift Right
+     */
+    //% blockId="I2C_LCD1620_SHR" block="Shift Right"
+    //% weight=60 blockGap=8
+    export function shr(): void {
+        setcmd(0x1C)
+    }
 }
