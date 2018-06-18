@@ -2,7 +2,7 @@
 * LCD1602 Screen Functions
 */
 
-//% weight=0 color=#794044 icon="\uf108" block="LCD1602"
+//% weight=0 color=#794044 icon="\uf108" block="LCD1602液晶"
 namespace lcd1602 {
     export let LCD_I2C_ADDR = 0x3f
     let buf = 0x00
@@ -75,6 +75,9 @@ namespace lcd1602 {
         setcmd(0x01)
     } 
 
+    /**
+     * 初始化I2C地址
+     */
     //% blockId="LCD_setAddress" block="LCD1602 I2C address %myAddr"
     //% weight=51 blockExternalInputs=true
     export function setAddress(myAddr: I2C_ADDR): void {
@@ -82,6 +85,9 @@ namespace lcd1602 {
         setI2CAddress()
     }
 
+    /**
+     * 初始化I2C地址（数字）
+     */
     //% blockId="LCD_setAddress2" block="LCD1602 I2C address %myAddr"
     //% weight=50 blockExternalInputs=true
     export function setAddress2(myAddr: number): void {
@@ -89,12 +95,18 @@ namespace lcd1602 {
         setI2CAddress()
     }
 
+    /**
+     * 清屏
+     */
     //% blockId="LCD_clear" block="LCD clear"
     //% weight=45
     export function clear(): void {
         setcmd(0x01)
     }
 
+    /**
+     * 设置背光
+     */
     //% blockId="LCD_backlight" block="set LCD backlight %on"
     //% weight=46
     export function set_backlight(on: on_off): void {
@@ -105,6 +117,9 @@ namespace lcd1602 {
         setcmd(0x00)
     }
 
+    /**
+     * 设置字符串显示
+     */
     //% blockId="LCD_Show" block="set string %show"
     //% weight=47
     export function set_LCD_Show(show: visibled): void {
@@ -125,6 +140,9 @@ namespace lcd1602 {
         setdat(ch)
     }
 
+    /**
+     * 打印字符串
+     */
     //% blockId="LCD_putString" block="LCD show string %s|on x:%x|y:%y"
     //% weight=49 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putString(s: string, x: number, y: number): void {
@@ -141,18 +159,28 @@ namespace lcd1602 {
             }
         }
     }
+	
+    /**
+     * 打印数字
+     */
     //% blockId="LCD_putNumber" block="LCD show number %n|on x:%x|y:%y"
     //% weight=48 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putNumber(n: number, x: number, y: number): void {
         putString(n.toString(),x,y)
     }
 
+    /**
+     * 屏幕左移
+     */
     //% blockId="LCD_shl" block="Shift Left"
     //% weight=43
     export function shl(): void {
         setcmd(0x18)
     }
 
+    /**
+     * 屏幕右移
+     */
     //% blockId="LCD_shr" block="Shift Right"
     //% weight=42
     export function shr(): void {

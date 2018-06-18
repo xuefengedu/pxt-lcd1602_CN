@@ -1,6 +1,6 @@
 # LCD1602
 
-This is LCD1602 pxt for micro:bit
+LCD1602液晶microbit扩展包
 
 forked from below 2 repository
 

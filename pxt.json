@@ -1,7 +1,7 @@
 {
     "name": "lcd1602",
     "version": "0.1.0",
-    "description": "A Microsoft MakeCode package for LCD1602 pxt",
+    "description": "LCD1602液晶microbit扩展包",
     "license": "MIT",
     "dependencies": {
         "core": "*"
