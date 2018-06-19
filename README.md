@@ -13,6 +13,7 @@ MIT
 ## Screen shots
 
 lcd1602 makecode picture:
+
 ![Alt text](lcd1602.PNG?raw=true "lcd1602 makecode picture")
 
 [sample hex download](microbit-LCD1602-Test.hex)
