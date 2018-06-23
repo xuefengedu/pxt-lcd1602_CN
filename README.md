@@ -16,7 +16,7 @@ lcd1602 makecode picture:
 
 ![Alt text](lcd1602.PNG?raw=true "lcd1602 makecode picture")
 
-[sample hex download](microbit-LCD1602-Test.hex)
+[sample hex download](microbit-LCD1602-Test.hex) 点击链接后，页面上有3个按钮：“Raw”按钮，“Blame”按钮，“History”按钮，在“Raw”按钮上右键，另存为，进行下载。
 
 ![Alt text](1.jpg?raw=true "lcd1602 test picture")
 
