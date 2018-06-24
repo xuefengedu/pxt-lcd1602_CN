@@ -1,6 +1,6 @@
-# LCD1602
+# LCD1602 (compatible with LCD2004)
 
-LCD1602液晶microbit扩展包
+LCD1602液晶microbit扩展包 （以修改为支持和兼容LCD2004）
 
 forked from below 2 repository
 
@@ -16,7 +16,11 @@ lcd1602 makecode picture:
 
 ![Alt text](lcd1602.PNG?raw=true "lcd1602 makecode picture")
 
+![Alt text](lcd2004.PNG?raw=true "lcd2004 makecode picture")
+
 [sample hex download](microbit-LCD1602-Test.hex) 点击链接后，页面上有3个按钮：“Raw”按钮，“Blame”按钮，“History”按钮，在“Raw”按钮上右键，另存为，进行下载。
+
+![Alt text](lcd2004_code.jpg?raw=true "lcd1602 test picture")
 
 ![Alt text](1.jpg?raw=true "lcd1602 test picture")
 
