@@ -132,8 +132,12 @@ namespace lcd1602 {
     function printChar(ch: number, x: number, y: number): void {
         if (x >= 0) {
             let a = 0x80
-            if (y > 0)
+            if (y == 1)
                 a = 0xC0
+	    if (y == 2)
+                a = 0x80 + 0x14
+            if (y == 3)
+                a = 0xC0 + 0x14
             a += x
             setcmd(a)
         }
