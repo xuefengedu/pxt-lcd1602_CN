@@ -2,6 +2,7 @@
     "lcd1602|block": "LCD1602",
     "lcd1602.setAddress|block": "設定LCD1602 I2C位址 %myAddr",
     "lcd1602.setAddress2|block": "設定LCD1602 I2C位址 %myAddr",
+    "lcd1602.setAddress3|block": "自動設定LCD1602 I2C位址",
     "lcd1602.putString|block": "LCD 顯示字串 %s|在座標 x:%x|y:%y",
     "lcd1602.putNumber|block": "LCD 顯示數字 %n|在座標 x:%x|y:%y",
     "lcd1602.on_off.on|block":"開",
