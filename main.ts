@@ -95,6 +95,43 @@ namespace lcd1602 {
         setI2CAddress()
     }
 
+    // 自动识别I2C地址 from https://github.com/microbit-makecode-packages/I2CLCD1620_cn/commit/d22eca95d7dae176f40888ce5b88c4605d5ce78c
+    function AutoAddr() {
+        let k = true
+        let addr = 0x20
+        let d1 = 0, d2 = 0
+        while (k && (addr < 0x28)) {
+            pins.i2cWriteNumber(addr, 0xffffffff, NumberFormat.Int32LE)
+            d1 = pins.i2cReadNumber(addr, NumberFormat.Int8LE) % 16
+            pins.i2cWriteNumber(addr, 0, NumberFormat.Int16LE)
+            d2 = pins.i2cReadNumber(addr, NumberFormat.Int8LE)
+            if ((d1 == 7) && (d2 == 0)) k = false
+            else addr += 1
+        }
+        if (!k) return addr
+         addr = 0x38
+        while (k && (addr < 0x40)) {
+            pins.i2cWriteNumber(addr, 0xffffffff, NumberFormat.Int32LE)
+            d1 = pins.i2cReadNumber(addr, NumberFormat.Int8LE) % 16
+            pins.i2cWriteNumber(addr, 0, NumberFormat.Int16LE)
+            d2 = pins.i2cReadNumber(addr, NumberFormat.Int8LE)
+            if ((d1 == 7) && (d2 == 0)) k = false
+            else addr += 1
+        }
+        if (!k) return addr
+        else return 0
+    }
+
+    /**
+     * 自动初始化I2C地址
+     */
+    //% blockId="LCD_setAddress3" block="Auto set LCD1602 I2C address"
+    //% weight=50
+    export function setAddress3(): void {
+        LCD_I2C_ADDR = AutoAddr()
+        setI2CAddress()
+    }
+
     /**
      * 清屏
      */
