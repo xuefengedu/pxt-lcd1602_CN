@@ -9,6 +9,7 @@
     "files": [
         "README.md",
         "main.ts",
+        "_locales/zh/lcd1602-strings.json",
         "_locales/zh-CN/lcd1602-strings.json",
         "_locales/zh-TW/lcd1602-strings.json"
     ],
