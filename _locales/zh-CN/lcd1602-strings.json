@@ -1,0 +1,17 @@
+{
+    "lcd1602|block": "LCD1602液晶",
+    "lcd1602.setAddress|block": "设置LCD1602 I2C地址 %myAddr",
+    "lcd1602.setAddress2|block": "设置LCD1602 I2C地址 %myAddr",
+    "lcd1602.setAddress3|block": "自动设置LCD1602 I2C地址",
+    "lcd1602.putString|block": "LCD 显示字符串 %s|在坐标 x:%x|y:%y",
+    "lcd1602.putNumber|block": "LCD 显示数字 %n|在坐标 x:%x|y:%y",
+    "lcd1602.on_off.on|block":"开",
+    "lcd1602.on_off.off|block":"关",
+    "lcd1602.visibled.visible|block":"显示",
+    "lcd1602.visibled.invisible|block":"隐藏",
+    "lcd1602.set_LCD_Show|block": "设置字符串 %show",
+    "lcd1602.set_backlight|block": "设置LCD背光 %on",
+    "lcd1602.clear|block": "LCD清除屏幕",
+    "lcd1602.shl|block": "LCD屏幕左移",
+    "lcd1602.shr|block": "LCD屏幕右移"
+}
